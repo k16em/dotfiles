@@ -1,7 +1,7 @@
 REPO_FILES		:= $(wildcard .??*)
 REPO_CONFIG_DIRS	:= $(wildcard .config/*)
 IGNORE_FILES		:= .DS_Store .git .gitmodules .gitignore .config
-IGNORE_DIRS		:=
+IGNORE_DIRS		:= .claude
 DOT_FILES		:= $(filter-out $(IGNORE_FILES),$(REPO_FILES))
 CONFIG_DIRS		:= $(filter-out $(IGNORE_DIRS),$(REPO_CONFIG_DIRS))
 
