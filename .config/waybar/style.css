@@ -1,0 +1,9 @@
+/* Base on the system default style. */
+@import url("file:///etc/xdg/waybar/style.css");
+
+/* modules-left (wlr/taskbar) text in white. */
+#taskbar,
+#taskbar button,
+#taskbar button label {
+    color: #ffffff;
+}
