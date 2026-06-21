@@ -1,7 +1,7 @@
 REPO_FILES		:= $(wildcard .??*)
 REPO_CONFIG_DIRS	:= $(wildcard .config/*)
 IGNORE_FILES		:= .DS_Store .git .gitmodules .gitignore .config
-IGNORE_DIRS		:= .config/sway .config/waybar-sway .config/labwc .config/waybar-labwc .config/i3 .config/polybar
+IGNORE_DIRS		:= .config/sway .config/labwc .config/i3 .config/polybar
 DOT_FILES		:= $(filter-out $(IGNORE_FILES),$(REPO_FILES))
 CONFIG_DIRS		:= $(filter-out $(IGNORE_DIRS),$(REPO_CONFIG_DIRS))
 
@@ -36,15 +36,11 @@ i3:
 
 .PHONY: sway
 sway:
-	unlink $(HOME)/.config/waybar
 	@$(foreach configdir, $(SWAY_DIRS), ln -sfnv $(abspath $(configdir)) "$(HOME)/$(configdir)";)
-	ln -sfnv $(abspath .config/waybar-sway) "$(HOME)/.config/waybar"
 
 .PHONY: labwc
 labwc:
-	unlink $(HOME)/.config/waybar
 	@$(foreach configdir, $(LABWC_DIRS), ln -sfnv $(abspath $(configdir)) "$(HOME)/$(configdir)";)
-	ln -sfnv $(abspath .config/waybar-labwc) "$(HOME)/.config/waybar"
 
 clean:
 	@-$(foreach dotfile, $(DOT_FILES), rm -vrf $(HOME)/$(dotfile);)
