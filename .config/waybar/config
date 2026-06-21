@@ -2,13 +2,12 @@
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 20, // Waybar height (to be removed for auto height)
     "spacing": 2, // Gaps between modules (4px)
-    // labwc の設定を正とし、sway から niri でも動作する汎用モジュール (backlight, battery) を統合
     "modules-left": ["wlr/taskbar"],
     "modules-right": ["pulseaudio", "backlight", "battery", "clock", "tray"],
 
     "wlr/taskbar": {
         "format": "{app_id}",
-        "on-click": "minimize-raise",
+        "on-click": "minimize-raise"
     },
     "tray": {
         "spacing": 10
@@ -53,5 +52,5 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
+    }
 }
