@@ -21,11 +21,6 @@ install:
 emacs:
 	emacs --batch -f batch-byte-compile ~/.emacs.d/init.el
 
-.PHONY: skk
-skk:
-	curl -o ${HOME}/.eskk/SKK-JISYO.L --create-dirs http://openlab.jp/skk/skk/dic/SKK-JISYO.L
-	touch ${HOME}/.eskk/USER.L
-
 clean:
 	@-$(foreach dotfile, $(DOT_FILES), rm -vrf $(HOME)/$(dotfile);)
 	@-$(foreach configdir, $(REPO_CONFIG_DIRS), rm -vrf $(HOME)/$(configdir);)
