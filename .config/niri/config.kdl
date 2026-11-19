@@ -378,7 +378,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: WezTerm" { spawn "wezterm"; }
     Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show"; }
     Mod+N hotkey-overlay-title="Open a File Manager: nemo" { spawn "nemo"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
