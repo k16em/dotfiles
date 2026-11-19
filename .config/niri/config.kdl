@@ -271,8 +271,6 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "fcitx5"
 spawn-at-startup "mako"
-spawn-at-startup "steam" "-silent"
-spawn-at-startup "discord" "--start-minimized"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "swaybg" "-i" "/usr/share/backgrounds/archlinux/wireparts.png" "-m" "fill"
 
